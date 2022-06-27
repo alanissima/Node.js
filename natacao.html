@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>Nadar</title>
+    <style>
+        body {
+           background-color: black;
+           font-style: cursive;
+           color: cyan;
+        }
+
+        h1 {
+           color: white;
+        }
+
+        input {
+           background-color: blue;
+           color: white;
+        } 
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Fases da vida.. e do nado..</h1>
+           
+        <form id="form" name="media">
+            <input type="idade" id="idade" placeholder="idade">
+            <input onclick="calcular()" type="submit" id="calcular" placeholder="resultado">
+        </form>
+    </main>
+
+    <script>
+        function calcular() {
+          var idade = parseFloat(document.getElementById("idade").value);
+
+          if (idade >= 5 && idade <= 7) {
+            document.write("Categoria INFANTIL A");
+          }
+
+          if (idade >= 8 && idade <= 10) {
+            document.write("Categoria INFANTIL B");
+          }
+
+          if (idade >= 11 && idade <= 13) {
+            document.write("Categoria JUVENIL A");
+          }
+
+          if (idade >= 14 && idade <= 17) {
+            document.write("Categoria JUVENIL B");
+          }
+
+          if (idade >= 18) {
+            document.write("Categoria ADULTO");
+          }
+        }
+    </script>
+</body>
+</html>
