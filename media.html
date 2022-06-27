@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>Média</title>
+    <style>
+        body {
+           background-color: orange;
+           font-style: cursive;
+           color: red;
+        }
+
+        h1 {
+           color: black;
+        }
+
+        input {
+           background-color: yellow;
+           color: red;
+        } 
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Média</h1>
+           
+        <form id="form" name="media">
+            <input type="number" id="nota1" placeholder="nota 1">
+            <input type="number" id="nota2" placeholder="nota 2">
+            <input type="number" id="nota3" placeholder="nota 3">
+
+            <input onclick="calcular()" type="submit" id="Calcular" placeholder="resultado">
+        </form>
+
+    </section>
+
+    <script>
+        function calcular() {
+          var n1 = parseFloat(document.getElementById("nota1").value);
+          var n2 = parseFloat(document.getElementById("nota2").value);
+          var n3 = parseFloat(document.getElementById("nota3").value);
+
+          m = (n1 + n2 + n3)/3;
+
+          if (m < 6) {
+            document.write("nota final (média): " + m + " - REPROVADO");
+          }
+
+          if (MEDIA >= 6) {
+            document.write("nota final (média): " + m + " - APROVADO");
+          }
+        }
+    </script>
+
+</body>
+</html>
