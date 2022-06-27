@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>IMC3</title>
+    <style>
+        body {
+           background-color: lavender;
+           font-style: cursive;
+           color: blue;
+        }
+
+        h1 {
+           color: black;
+        }
+
+        input {
+           background-color: blue;
+           color: lavender;
+        } 
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>IMCedário</h1>
+           
+        <form id="form" name="imc">
+            <input type="number" id="peso" placeholder="peso (kg)">
+            <input type="number" id="altura" placeholder="altura (cm)">
+
+            <input onclick="calcular()" type="submit" id="calcular" placeholder="resultado">
+        </form>
+    </main>
+
+    <script>
+        function calcular() {
+          var peso = document.getElementById("peso").value;
+          var altura = document.getElementById("altura").value;
+          imc = peso/(altura*altura);
+
+          if (imc < 25) {
+            document.write("O IMC para esses valores é " + imc + " (peso ideal)");
+          }
+
+          if (imc > 25) {
+            document.write("O IMC para esses valores é " + imc + " (acima do peso)");
+          }
+        }
+    </script>
+
+</body>
+</html>
